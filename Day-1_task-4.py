@@ -12,17 +12,21 @@
 def main():
     pass
     def listToStr(list):
-        str1=""
-        for item in list:
-            if item == list[len(list)-1]:
-                str1 += "and "+item
-            elif item == list[len(list)-2]:
-                str1 += item+" "
-            else:
-                str1 += item+", "
-        return str1
+        if len(list) <1:
+            return "Empty List"
+        else:
+            str1=""
+            for item in list:
+                if item == list[len(list)-1]:
+                    str1 += "and "+item
+                #elif item == list[len(list)-2]:
+                #    str1 += item+" "
+                else:
+                    str1 += item+", "
+            return str1
 
     food = ['apples', 'bananas', 'tofu', 'soya']
+    #food = []
     print(listToStr(food))
 
 if __name__ == '__main__':
